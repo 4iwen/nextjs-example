@@ -13,8 +13,8 @@ export default function OperationInput(props: OperationInputProps) {
           props.setOperation(e.target.value as Operation);
         }}
       >
-        {Object.values(Operation).map((operation) => (
-          <option value={operation}>{operation}</option>
+        {Object.values(Operation).map((operation: Operation, index: number) => (
+          <option key={index} value={operation}>{operation}</option>
         ))}
       </select>
     </div>
